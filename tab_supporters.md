@@ -4,10 +4,12 @@ displaytext: Supporters
 layout: null
 tab: true
 order: 3
-tags: tmphide
+tags: nocode
 ---
 
 ## Contributors
+
+Individuals that provided a significant contribution to the project:
 
 | Name | Affiliation | Contact |
 | --- | --- | --- |
