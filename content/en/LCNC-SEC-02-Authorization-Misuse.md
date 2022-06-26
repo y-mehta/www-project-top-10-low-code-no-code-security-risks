@@ -38,6 +38,13 @@ The application has configured permissions to ensure each user can only view rel
 However, the application is configured in such a way that the underlying database connection is implicitly shared with its user.
 An application user can use the database connection directly, gaining full access to all records.
 
+### Scenario #3
+
+Admin connects an application to their source code management system (i.e., BitBucket) using a service account.
+The provisioned service account has unrestricted access to all repositories for enabling seamless integration.
+Any internal user can abuse this connection to get access to restricted repositories which normally they don't have access to.
+
+
 ## How to Prevent
 
 - Disable or monitor the use of implicitly shared connections.

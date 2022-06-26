@@ -35,7 +35,7 @@ Database logs indicate that all queries were made by a single user, the app make
 ### Scenario #2
 
 A maker creates a business application that allows corporate employees to fill out forms with their information.
-To store form responses, the user uses their own personal Gmail account.
+To store form responses, the creator uses their own personal email account.
 Users cannot know that the app is storing their data on the maker's personal account.
 
 ### Scenario #3
@@ -50,7 +50,7 @@ Once the admin uses the app, they inadvertently elevate the maker's privileges.
 - Adhere to the principle of least privilege when provisioning connections to external services.
 - Ensure applications use dedicated service accounts rather than user accounts.
 - Ensure applications use a single consistent identity across all their connections, rather than a different identity for each. 
-- Ensure proper audit trail is maintained to identify the actor in case of compromise.
+- Ensure proper audit trail is maintained to identify the actor behind each action performed through the shared connection.
 
 ## References
 
