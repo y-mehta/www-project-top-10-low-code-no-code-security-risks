@@ -22,12 +22,12 @@ Furthermore, multiple applications can be connected to and triggered by a single
 ### Scenario #1
 
 A maker configures automation that triggers on each new email received in their corporate mailbox.
-They create a new email message for each email on their personal Gmail account and copy the recipients, subject and body.
-Since data is copied to a separate mailbox rather than emails being forwarded, the automation bypasses DLP controls.
+Automation sends a new email to the maker's personal email account, copying the recipients, subject, and body from the email received in the corporate mailbox.
+Since data is copied to a separate mailbox rather than emails being forwarded from the corporate mailbox, the automation bypasses DLP controls.
 
 ### Scenario #2
 
-Maker #1 sets up automation that syncs changes between two SharePoint sites, so every new file on site A is created on site B.
+Maker #1 sets up automation that syncs changes between two SharePoint sites, so every new file on site A is copied to site B.
 User #2 accidentally writes a sensitive document to site A, not knowing that it is replicated to site B.
 User #2 deletes the document from site A.
 However, the document is still available on site B.
