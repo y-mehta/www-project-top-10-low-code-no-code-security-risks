@@ -20,7 +20,7 @@ This means that connections can be shared among applications, with other users, 
 Many no-code/low-code platforms abuse OAuth authorization flows by querying and storing user refresh tokens and re-using them at will to increase productivity and reduce time-to-deliver.
 This allows business users to quickly set up connections without thinking about secrets or permissions; at the same time, connections are embedded with user identities that are difficult to monitor or revoke.
 Even though OAuth refresh tokens are designed to be short-lived, they are most frequently valid for a few months or even years. 
-Hence, a connection created by a business user in under a minute could persist in the no-code/low-code platform for a long period and often get used by other users for different purposes than the original intention.
+Hence, a connection created by a business user in under a minute could persist in the no-code/low-code platform for an extended period and often get used by other users for different purposes than the original intention.
 
 ## Example Attack Scenarios
 
@@ -28,21 +28,21 @@ Hence, a connection created by a business user in under a minute could persist i
 
 A maker creates a connection to their corporate email account.
 They inadvertently click the "share with everyone" option.
-Every user in the organization, including contractors and vendors, gains access to their corporate email accounts.
+Every user in the organization, including contractors and vendors, gains access to their corporate email account.
 A malicious user triggers a "forgot password" flow and uses the connection to follow through with the process and gain control over the account.
 
 ### Scenario #2
 
 A maker creates a simple application to view records from a database.
-The application has configured permissions to ensure each user can only view related records.
+The application is configured to ensure each user can only view related records.
 However, the application is configured in such a way that the underlying database connection is implicitly shared with its user.
 An application user can use the database connection directly, gaining full access to all records.
 
 ### Scenario #3
 
 Admin connects an application to their source code management system (i.e., BitBucket) using a service account.
-The provisioned service account has unrestricted access to all repositories for enabling seamless integration.
-Any internal user can abuse this connection to get access to restricted repositories which normally they don't have access to.
+The provisioned service account has unrestricted access to all repositories to enable seamless integration.
+Any internal user can abuse this connection to access restricted repositories they usually don't have access to.
 
 
 ## How to Prevent
